@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/project_crowd
+
+    username: root
+
+    password: chen123
+  rabbitmq:
+    host: localhost
+    virtual-host: /leyou
+    username: leyou
+    password: leyou
+    template:
+      exchange: leyou.item.exchange
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+mybatis:
+  type-aliases-package: com.item.pojo
+
